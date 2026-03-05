@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Blog</title>
+</head>
+<body>
+
+<h1>Create Blog</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <div>
+        <label>Title</label><br>
+        {{ form.title }}
+    </div>
+
+    <br>
+
+    <div>
+        <label>Content</label><br>
+        {{ form.content }}
+    </div>
+
+    <br>
+
+    <button type="submit">Publish</button>
+</form>
+
+<br>
+<a href="/">Back to Blogs</a>
+
+</body>
+</html>
